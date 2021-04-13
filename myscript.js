@@ -7,26 +7,37 @@
 
 
 // ELENCO COGNOMI
-var listaCognome = ["Cappellacci", "Castro", "Arceni", "Mastroangelo", "Ricci"];
+var listaCognome = ["Cappellacci",
+    "Castro",
+    "Arceni",
+    "Mastroangelo",
+    "Ricci "
+];
 
 // INSERIRE COGNOME
 var cognome = prompt("Inserisci il tuo cognome");
 
+ var containerList = document.getElementById("container_list");
+
+
 // SE IL COGNOME È UN NUMERO
 if (!Number.isNaN(parseInt(cognome))) {
     alert("Non vanno inseriti numeri");
-}
+    
+}else {
 // SE LA PRIMA LETTERA È MINUSCOLA LA TRASFORMIAMO IN MAISCUOLA PER NON AVERE PROBLEMI DI ORDINE ALFABETICO
 cognome = cognome.charAt(0).toUpperCase() + cognome.slice(1);
 // INSERIAMO IL COGNOME SCRITTO NELL'ARRAY
 listaCognome.push(cognome);
 // STAMPIAMO LA LISTA IN ORDINE ALFABETICO
 console.log(listaCognome.sort());
-
+containerList.innerHTML += "<li>" + listaCognome + "</li>";
 // TROVIAMO LA POSIZIONE DEL COGNOME INSERITO
 var pos = listaCognome.indexOf(cognome) + 1;
 // STAMPIAMO LA POSIZIONE
 console.log(" La posizione del cognome è la numero: " + pos);
+
+}
 
 
 
