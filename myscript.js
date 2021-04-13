@@ -26,7 +26,7 @@ console.log(listaCognome.sort());
 // TROVIAMO LA POSIZIONE DEL COGNOME INSERITO
 var pos = listaCognome.indexOf(cognome) + 1;
 // STAMPIAMO LA POSIZIONE
-console.log(pos);
+console.log(" La posizione del cognome è la numero: " + pos);
 
 
 
